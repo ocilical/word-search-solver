@@ -84,6 +84,13 @@ function solvePuzzle() {
     newBody.setAttribute("id", "tableBody");
     oldBody.parentNode.replaceChild(newBody, oldBody);
 
+    //error message
+    if(!answers.length){
+        document.getElementById("error").innerHTML = "no matches found!";
+        return;
+    }
+    document.getElementById("error").innerHTML = ""
+
     //add answers
     for (const ans of answers) {
         let newRow = table.getElementsByTagName("tbody")[0].insertRow(-1);
