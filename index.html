@@ -2,7 +2,8 @@
 <html>
     <head>
         <title>word search solver</title>
-        <script type="text/javascript" src="solver.js" async></script>
+        <link rel="stylesheet" type="text/css" href="theme.css">
+        <script src="solver.js" async></script>
     </head>
     <body>
         <h1>(currently nonfunctional) crossword solver</h1>
@@ -12,5 +13,20 @@
         <input type="text" id="wordInput">
         <br>
         <button type="button" id="solveButton">solve</button>
+        <div>
+            <table id="answerTable">
+                <thead>
+                    <tr>
+                        <th>word</th>
+                        <th>x</th>
+                        <th>y</th>
+                        <th>direction</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
     </body>
 </html>
