@@ -22,7 +22,6 @@ function getCol(arr, col) {
     return column;
 }
 
-//this thing is a mess, watch out
 function solvePuzzle() {
     //array of answers
     let answers = [];
