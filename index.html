@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>word search solver</title>
-        <link rel="stylesheet" type="text/css" href="theme.css">
-        <script src="solver.js" async></script>
-    </head>
-    <body>
-        <h1>(currently nonfunctional) crossword solver</h1>
-        <p>crossword grid:</p>
-        <textarea id="gridInput" rows="5" cols="20"></textarea>
-        <p>word list:</p>
-        <input type="text" id="wordInput">
-        <br>
-        <button type="button" id="solveButton">solve</button>
-        <div>
-            <table id="answerTable">
-                <thead>
-                    <tr>
-                        <th>word</th>
-                        <th>x</th>
-                        <th>y</th>
-                        <th>direction</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
 
-                </tbody>
-            </table>
-        </div>
-    </body>
+<head>
+    <title>word search solver</title>
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <script src="solver.js" async></script>
+</head>
+
+<body>
+    <h1>(currently nonfunctional) word search solver</h1>
+    <p>This will only work properly if the input is rectangular.<br>You can add spaces if you want to try to get it to work
+        on weird shaped ones.</p>
+    <p>word search grid:</p>
+    <textarea id="gridInput" rows="5" cols="20"></textarea>
+    <p>word list:</p>
+    <input type="text" id="wordInput">
+    <br>
+    <button type="button" id="solveButton">solve</button>
+    <div>
+        <table id="answerTable">
+            <thead>
+                <tr>
+                    <th>word</th>
+                    <th>x</th>
+                    <th>y</th>
+                    <th>direction</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+    </div>
+</body>
+
 </html>
