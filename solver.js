@@ -39,21 +39,20 @@ function solvePuzzle() {
                 
                 if (word.startsWith(grid[i][j])) {
                     const len = word.length;
-                    for (let dir = 0; dir < 8; dir++) {
+                    for (let dir = 0; dir < 8; dir++) { //look in every direction
                         let iDir = i;
                         let jDir = j;
                         let pos = 0;
                         
-                        for (pos = 0; pos < len; pos++) {
-                            if (iDir >= height || iDir < 0 || jDir >= width || iDir < 0) {
+                        for (pos = 0; pos < len; pos++) {//move in direction and check for word
+                            if (iDir >= height || iDir < 0 || jDir >= width || iDir < 0) {//check out of bounds
                                 break;
                             }
-                            if (word.charAt(pos) !== grid[iDir][jDir]) {
+                            if (word.charAt(pos) !== grid[iDir][jDir]) {//check letter match
                                 break;
                             }
-                            iDir += dirsY[dir];
+                            iDir += dirsY[dir]; //move
                             jDir += dirsX[dir];
-                            console.log(word)
                         }
 
                         if (pos === len) {
