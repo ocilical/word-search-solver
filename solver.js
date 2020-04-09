@@ -9,19 +9,6 @@ class Answer {
     }
 }
 
-function reverseString(str) {
-    return str.split("").reverse().join("");
-}
-
-//get column of 2d array
-function getCol(arr, col) {
-    let column = [];
-    for (let r = 0; r < arr.length; r++) {
-        column.push(arr[r][col]);
-    }
-    return column;
-}
-
 function solvePuzzle() {
     //array of answers
     let answers = [];
