@@ -31,16 +31,19 @@ function solvePuzzle() {
     let dirsX = [-1, 0, 1, -1, 1, -1, 0, 1];
     let dirsY = [-1, -1, -1, 0, 0, 1, 1, 1];
 
-
+    //solve it!
     for (const word of words) {
+        
         for (let i = 0; i < grid.length; i++) {
             for (let j = 0; j < grid[0].length; j++) {
+                
                 if (word.startsWith(grid[i][j])) {
                     const len = word.length;
                     for (let dir = 0; dir < 8; dir++) {
                         let iDir = i;
                         let jDir = j;
                         let pos = 0;
+                        
                         for (pos = 0; pos < len; pos++) {
                             if (iDir >= height || iDir < 0 || jDir >= width || iDir < 0) {
                                 break;
@@ -52,12 +55,13 @@ function solvePuzzle() {
                             jDir += dirsX[dir];
                             console.log(word)
                         }
-                        if(pos === len){
+
+                        if (pos === len) {
                             answers.push(new Answer(word, i, j, dirNames[dir]))
                         }
-
                     }
                 }
+
             }
         }
 
@@ -72,7 +76,7 @@ function solvePuzzle() {
     oldBody.parentNode.replaceChild(newBody, oldBody);
 
     //error message
-    if(!answers.length){
+    if (!answers.length) {
         document.getElementById("error").innerHTML = "no matches found!";
         return;
     }
@@ -82,8 +86,8 @@ function solvePuzzle() {
     for (const ans of answers) {
         let newRow = table.getElementsByTagName("tbody")[0].insertRow(-1);
         newRow.insertCell(-1).innerHTML = ans.word;
-        newRow.insertCell(-1).innerHTML = ans.x+1;
-        newRow.insertCell(-1).innerHTML = ans.y+1;
+        newRow.insertCell(-1).innerHTML = ans.x + 1;
+        newRow.insertCell(-1).innerHTML = ans.y + 1;
         newRow.insertCell(-1).innerHTML = ans.dir;
     }
 
