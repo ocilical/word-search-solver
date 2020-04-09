@@ -40,7 +40,7 @@ function solvePuzzle() {
     let words = document.getElementById("wordInput").value.toLowerCase().split(/[ ,]+/);
 
     //direction arrays
-    let dirNames = ["up left", "up", "up right", "left", "right", "down left", "down", "down right"];
+    let dirNames = ["↖", "↑", "↗", "←", "→", "↙", "↓", "↘"];
     let dirsX = [-1, 0, 1, -1, 1, -1, 0, 1];
     let dirsY = [-1, -1, -1, 0, 0, 1, 1, 1];
 
