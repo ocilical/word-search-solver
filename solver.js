@@ -26,7 +26,7 @@ function solvePuzzle() {
     //array of answers
     let answers = [];
     //get and format letter grid
-    let grid = document.getElementById("gridInput").value;
+    let grid = document.getElementById("gridInput").value.toLowerCase();
     grid = grid.split("\n");
     grid.forEach((element, index, arr) => {
         arr[index] = element.split("");
@@ -37,7 +37,7 @@ function solvePuzzle() {
     let height = grid.length;
 
     //get array of words to look for
-    let words = document.getElementById("wordInput").value.split(/[ ,]+/);
+    let words = document.getElementById("wordInput").value.toLowerCase().split(/[ ,]+/);
 
     //direction arrays
     let dirNames = ["up left", "up", "up right", "left", "right", "down left", "down", "down right"];
